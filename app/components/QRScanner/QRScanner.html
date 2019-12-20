@@ -1,0 +1,34 @@
+<FlexboxLayout flexDirection="column" backgroundColor="#3c495e">
+    <GridLayout  height="50%" columns="*, 1*" rows="1*, 1*" >
+        <Button text="QRScanner" @tap="scanQr()" row="0" col="0"/>
+        <Button text="Geolocation" @tap="getGeoLocation()"  row="0" col="1"/>
+    </GridLayout>
+    <Label textWrap="true">
+        <FormattedString >
+            <Span class="text" text="qrScanned:" />
+            <Span class="text" :text="qrScanned" />
+        </FormattedString>
+    </Label>
+    <Label  textWrap="true">
+        <FormattedString>
+            <Span class="text" text="Latitude:" />
+            <Span class="text" :text="locationScanned.latitude" />
+        </FormattedString>
+    </Label>
+    <Label textWrap="true">
+        <FormattedString>
+            <Span class="text" text="Longitude:" />
+            <Span class="text" :text="locationScanned.longitude" />
+        </FormattedString>
+    </Label>
+    <Button text="SendDataDevice" @tap="validData()"  row="0" col="1"/>
+<!--    <Label text="qrScanned:" height="70" backgroundColor="#43b883">-->
+<!--        {{qrScanned}}-->
+<!--    </Label>-->
+<!--    <Label text="latitude:" height="70" backgroundColor="#43b883">-->
+<!--        {{locationScanned.latitude}}-->
+<!--    </Label>-->
+<!--    <Label text="longitude:" height="70" backgroundColor="#43b883">-->
+<!--        {{locationScanned.longitude}}-->
+<!--    </Label>-->
+</FlexboxLayout>

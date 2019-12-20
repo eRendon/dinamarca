@@ -1,0 +1,17 @@
+<FlexboxLayout flexDirection="column">
+    <Button width="42.5%"
+            backgroundColor="#3c495e"
+            class="text" height="25%"
+            text="getDataDevice"
+            @tap="getDataDevice()"
+           />
+    <ListView for="device in dataDevice" >
+        <v-template>
+            <StackLayout backgroundColor="#3c495e">
+                <Label class="text" :text="device.codigoQr" />
+                <Label class="text" :text="device.ubicacion" />
+                <Label class="text" :text="device.imei" />
+            </StackLayout>
+        </v-template>
+    </ListView>
+</FlexboxLayout>
